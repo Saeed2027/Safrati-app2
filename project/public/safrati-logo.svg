@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="120" y2="120" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0f2d52"/>
+      <stop offset="1" stop-color="#0284c7"/>
+    </linearGradient>
+    <linearGradient id="planeGrad" x1="30" y1="30" x2="90" y2="95" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#e0f2fe"/>
+    </linearGradient>
+    <linearGradient id="trailGrad" x1="18" y1="95" x2="72" y2="48" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#7dd3fc" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#7dd3fc" stop-opacity="0.6"/>
+      <stop offset="1" stop-color="#bae6fd" stop-opacity="0.9"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Rounded background -->
+  <rect width="120" height="120" rx="28" fill="url(#bgGrad)"/>
+
+  <!-- Flight trail (curved dashed line) -->
+  <path d="M16 96 Q 40 88 55 70 Q 66 56 72 48" stroke="url(#trailGrad)" stroke-width="3.5" stroke-linecap="round" stroke-dasharray="2 6" fill="none"/>
+
+  <!-- Airplane silhouette - pointing up-right at an angle -->
+  <g transform="translate(60 60) rotate(-35)">
+    <!-- Fuselage -->
+    <path d="M0 -28 C 3 -26 4.5 -18 4 -6 L 4 18 C 4 24 2.5 27 0 28 C -2.5 27 -4 24 -4 18 L -4 -6 C -4.5 -18 -3 -26 0 -28 Z" fill="url(#planeGrad)"/>
+    <!-- Wings -->
+    <path d="M-4 0 L -24 12 L -24 16 L -4 10 Z" fill="url(#planeGrad)"/>
+    <path d="M4 0 L 24 12 L 24 16 L 4 10 Z" fill="url(#planeGrad)"/>
+    <!-- Tail fin -->
+    <path d="M-3 22 L -8 30 L -3 29 Z" fill="url(#planeGrad)"/>
+    <path d="M3 22 L 8 30 L 3 29 Z" fill="url(#planeGrad)"/>
+    <!-- Cockpit window -->
+    <ellipse cx="0" cy="-16" rx="2" ry="4" fill="#0ea5e9" opacity="0.8"/>
+  </g>
+
+  <!-- Location pin dot at trail start -->
+  <circle cx="16" cy="96" r="4.5" fill="#7dd3fc"/>
+  <circle cx="16" cy="96" r="2" fill="#ffffff"/>
+</svg>
